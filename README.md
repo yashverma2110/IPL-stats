@@ -1,3 +1,4 @@
+You can view the website at [iStats](http://yashverma.me/IPL-stats/)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
