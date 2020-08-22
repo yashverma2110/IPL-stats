@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "./App.css";
 import { data } from "./data/file";
 import { Dropdown } from "./Components/Dropdown";
+import { Loader } from "./Components/Loader";
 const Chart = React.lazy(() => import("./Components/Chart"));
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
       </div>
       <div className="charts">
         <div className="chart-wrapper" data-aos="fade-right">
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<Loader />}>
             <Chart
               data={stats}
               tag="winner"
@@ -50,7 +51,7 @@ function App() {
           </Suspense>
         </div>
         <div className="chart-wrapper" data-aos="fade-left">
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<Loader />}>
             <Chart
               data={stats}
               tag="result"
@@ -61,7 +62,7 @@ function App() {
           </Suspense>
         </div>
         <div className="chart-wrapper" data-aos="fade-right">
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<Loader />}>
             <Chart
               data={stats}
               tag="player_of_match"
@@ -71,7 +72,7 @@ function App() {
           </Suspense>
         </div>
         <div className="chart-wrapper" data-aos="fade-left">
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<Loader />}>
             <Chart
               data={stats}
               tag="toss_decision"
@@ -81,7 +82,7 @@ function App() {
           </Suspense>
         </div>
         <div className="chart-wrapper" data-aos="fade-right">
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<Loader />}>
             <Chart
               data={stats}
               tag="city"
